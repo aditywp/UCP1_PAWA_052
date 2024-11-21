@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Kolam Renang</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Daftar Kolam Renang</h1>
+    <a href="/add">Tambah Kolam Renang</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Lokasi</th>
+                <th>Harga</th>
+                <th>Deskripsi</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% kolamRenang.forEach(kolam => { %>
+                <tr>
+                    <td><%= kolam.nama %></td>
+                    <td><%= kolam.lokasi %></td>
+                    <td><%= kolam.harga %></td>
+                    <td><%= kolam.deskripsi %></td>
+                    <td>
+                        <a href="/edit/<%= kolam.id %>">Edit</a>
+                        <a href="/delete/<%= kolam.id %>">Hapus</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

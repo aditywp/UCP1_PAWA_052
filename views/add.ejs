@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Kolam Renang</title>
+</head>
+<body>
+    <h1>Tambah Kolam Renang</h1>
+    <form action="/add" method="POST">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" required><br>
+        <label>Lokasi:</label><br>
+        <input type="text" name="lokasi" required><br>
+        <label>Harga:</label><br>
+        <input type="number" name="harga" required><br>
+        <label>Deskripsi:</label><br>
+        <textarea name="deskripsi"></textarea><br>
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>

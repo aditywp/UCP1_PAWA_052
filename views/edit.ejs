@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Kolam Renang</title>
+</head>
+<body>
+    <h1>Edit Kolam Renang</h1>
+    <form action="/edit/<%= kolamRenang.id %>" method="POST">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" value="<%= kolamRenang.nama %>" required><br>
+        <label>Lokasi:</label><br>
+        <input type="text" name="lokasi" value="<%= kolamRenang.lokasi %>" required><br>
+        <label>Harga:</label><br>
+        <input type="number" name="harga" value="<%= kolamRenang.harga %>" required><br>
+        <label>Deskripsi:</label><br>
+        <textarea name="deskripsi"><%= kolamRenang.deskripsi %></textarea><br>
+        <button type="submit">Simpan Perubahan</button>
+    </form>
+</body>
+</html>
